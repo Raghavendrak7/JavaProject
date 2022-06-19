@@ -1,0 +1,37 @@
+@charset "ISO-8859-1";
+h2{
+	text-align: center;
+	font-family: Helvetica;
+}
+h4{
+	text-align: left;
+	font-family: Helvetica;
+	text-decoration: underline;
+}
+hr.line {
+  border: 2px solid black;
+}
+body {
+	background-image: url("https://png.pngtree.com/png-vector/20191030/ourlarge/pngtree-a-volunteer-helps-a-man-in-a-wheelchair-png-image_1921570.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right;
+}
+.details{
+	font-family: Helvetica;
+	font-size: 15px;
+}
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
