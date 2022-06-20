@@ -20,9 +20,7 @@
 <input type="text" name="u_name" placeholder="Enter UDID Here"><br>
 <input type="password" name="pa_wd" placeholder="Enter Password Here">
 <button class="btn"><a href = "Demo17.jsp">LOGIN </a></button> <br>
-
-Forgot <button class="btn"><a href="#">password?</a></button> <br>
-New User <button class="btn"><a href="#">Sign Up?</a></button> <br> 
+New User <button class="btn"><a href="first_page.jsp">Sign Up?</a></button> <br> 
 </form>
 </div>
 </body>
