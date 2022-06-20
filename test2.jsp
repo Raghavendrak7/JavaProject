@@ -30,12 +30,18 @@ gender=request.getParameter("gender");
 phn_no=request.getParameter("phno");
 dob=request.getParameter("pdob");
 tod=request.getParameter("tod");
+
+int tod1=Integer.parseInt(tod);
 //Address Table
 
 sname=request.getParameter("street");
 sno=request.getParameter("sno");
 locality=request.getParameter("loc");
 pincode=request.getParameter("pin");
+int age1=Integer.valueOf(age);
+int phno=Integer.parseInt(phn_no);
+int sno1=Integer.valueOf(sno);
+int pin1=Integer.valueOf(pincode);
 //Care Taker Details
 cname=request.getParameter("cname");
 cage=request.getParameter("cage");
@@ -46,6 +52,10 @@ cstreet=request.getParameter("cstreet");
 cstno=request.getParameter("cstno");
 cloc=request.getParameter("cloc");
 cpin=request.getParameter("cpin");
+int cid1=Integer.parseInt(cid);
+int cage1=Integer.parseInt(cage);
+int sno2=Integer.parseInt(cstno);
+int pin2=Integer.parseInt(cpin);
 try
 {
 	//"com.mysql.jdbc.Driver"
@@ -57,10 +67,11 @@ Statement st=conn.createStatement();
  st = conn.createStatement(); 
  String sql8 ="insert into login(udid,pwd) values('"+udid+"','"+pwd+"')";
  String sql ="insert into after_login(udid,hno,cid) values('"+udid+"','"+hno+"','"+cid+"')";
- String sql1 ="insert into personal_details(udid,age,gender,phn_no,fname) values('"+udid+"','"+age+"','"+gender+"','"+phn_no+"','"+fname+"')";
- String sql2 ="insert into disabled_address(hno,sname,sno,locality,pincode) values('"+hno+"','"+sname+"','"+sno+"','"+locality+"','"+pincode+"')";
- String sql3="insert into caretaker_details(cid,cname,cage,cgender,cphno,chno) values('"+cid+"','"+cname+"','"+cage+"','"+cgender+"','"+cphno+"','"+chno+"')";
- String sql4 ="insert into caretaker_address(chno,sname,sno,locality,pincode) values('"+chno+"','"+cstreet+"','"+cstno+"','"+cloc+"','"+cpin+"')";
+ String sql1 ="insert into personal_details(udid,age,gender,phn_no,fname) values('"+udid+"',"+age1+",'"+gender+"','"+phno+"','"+fname+"')";
+ String sql2 ="insert into disabled_address(hno,sname,sno,locality,pincode) values('"+hno+"','"+sname+"',"+sno1+",'"+locality+"',"+pin1+")";
+ String sql3="insert into caretaker_details(cid,cname,cage,cgender,cphno,chno) values("+cid1+",'"+cname+"',"+cage1+",'"+cgender+"','"+cphno+"','"+chno+"')";
+ String sql4 ="insert into caretaker_address(chno,sname,sno,locality,pincode) values('"+chno+"','"+cstreet+"',"+sno2+",'"+cloc+"',"+pin2+")";
+ String sql5 ="insert into typeofdisability_details (udid,tod) values('"+udid+"',"+tod1+")";
  st.executeUpdate(sql8);
  out.println("<br>Login insertion successfull:"+udid);
  st.executeUpdate(sql);
@@ -73,7 +84,8 @@ st.executeUpdate(sql2);
  out.println("<br>Cdetails successfully inserted for cid:"+cid);
  st.executeUpdate(sql4);
  out.println("<br>CAddress successfully inserted for locality:"+cloc);
-
+ st.executeUpdate(sql5);
+ out.println("<br>TypeofDIsability successfully inserted for tod:"+tod1);
   out.println("Data is successfully inserted!");
 }
 catch(Exception ex)

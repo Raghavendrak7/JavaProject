@@ -48,13 +48,13 @@ session.setAttribute("pa_wd",pa_wd);
 	</div>
 	<div class="listof">
 	<b><br><br>3.Type of Disabilities</b><br>
-	<select id="tod" name="tob">
-	<option value="BLINDNESS">BLINDNESS</option>
-	<option value="HEARING IMPAIRMENT">HEARING IMPAIRMENT</option>
-	<option value="MENTAL HEALTH">MENTAL HEALTH</option>
-	<option value="LOCOMOTOR DISABLITY">LOCOMOTOR DISABLITY</option>
-	<option value="INTELLECTUAL DISABILITY">INTELLECTUAL DISABILITY</option>
-	<option value="CEREBRAL PALSY">CEREBRAL PALSY</option>
+	<select id="tod" name="tod">
+	<option value="1">BLINDNESS</option>
+	<option value="2">HEARING IMPAIRMENT</option>
+	<option value="3">MENTAL HEALTH</option>
+	<option value="4">LOCOMOTOR DISABLITY</option>
+	<option value="5">INTELLECTUAL DISABILITY</option>
+	<option value="6">CEREBRAL PALSY</option>
 	</select>
 	</div>
 	<div class="cdetails">

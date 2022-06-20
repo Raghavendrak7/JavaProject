@@ -60,6 +60,7 @@ if(u_name!=null)
 		  <a href="Cdetails.jsp">Care Taker Details</a>
 		  <a href="Scholarship2.jsp">Scholarship Details</a>
 		  <a href="job1.jsp">Job Quota Details</a>
+		  <a href="display.jsp">Display Schemes</a>	  
 		  <a href="Demo15.jsp"><span style= "font-size:16px , align: right;">Logout <i class="fa fa-sign-out"></i></span></a>
 		</div>	
 <%
