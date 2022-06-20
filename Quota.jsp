@@ -50,6 +50,10 @@ if((age>=21 & age<33)&&(count<10))
 		out.println("You're elgible for Job");
 		out.print("<br>Click here to know about Vacancies"+"<a href='Job.jsp'>Job Description</a>");
 	}
+	else
+	{
+		out.print("<br> SORRY You're not elgible for this!!");
+	}
 }
 else
 {
